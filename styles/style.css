@@ -13,4 +13,84 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font-inter);
+  font-variation-settings: 'wght' var(--font-weight-card-text);
+  background-image: var(--gradient-stripes-horizontal), var(--gradient-stripes-vertical), var(--gradient-color);
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--color-text);
+  padding-block: 100px;
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.header {
+  background-color: #fff;
+  font-family: var(--font-press-start-2p);
+  width: var(--weight-content);
+  text-transform: uppercase;
+  margin-inline: auto;
+  padding-block: clamp(120px, 50%, 128px);
+  margin-block-end: 100px;
+  outline: 2px solid black;
+}
+
+.title-header {
+  font-family: Press Start 2P;
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  }
+
+.text-header {
+  font-family: Press Start 2P;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.content {
+  display: grid;
+  width: var(--weight-content);
+  margin-inline: auto;
+  gap: 50px;
+}
+
+.image-content {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  outline: 2px solid black;
+  background-color: #fff;
+}
+
+.card-title {
+  font-weight: 700;
+  padding: 3px 10px;
+  font-size: 18px;
+}
+
+.card-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}  
+
+.content-card-text {
+  display: grid;
+  gap: 27px;
+  padding: 25px;
 }

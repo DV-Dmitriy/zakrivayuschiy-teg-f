@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-press-start-2p: 'PressStart2P', sans-serif;
+  --font-weight-card-text: 400;
+  --font-weight-card-header: 700;
+  --gradient-stripes-horizontal: repeating-linear-gradient(
+    90deg,
+    #d3d3d3,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --gradient-stripes-vertical: repeating-linear-gradient(
+    0deg,
+    #d3d3d3,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  --gradient-color: linear-gradient(
+    to bottom,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%
+  );
+
+  --weight-content: clamp(375px, 50%, 700px);
+  --color-text: #000; 
+}
