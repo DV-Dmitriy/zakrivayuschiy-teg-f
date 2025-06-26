@@ -11,7 +11,18 @@
 */
 
 
-@keyframes showSparks {
+@keyframes heart-scale {
+  0% {
+    transform-origin: center;
+    scale: 1;
+  }
+  100% {
+    transform-origin: center;
+    scale: 1.25;
+  }
+}
+
+@keyframes show-Sparks {
   0% {
     opacity: 0;
   }

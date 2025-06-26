@@ -40,14 +40,14 @@
 
 .title-header {
   font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-normal);
+  font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   }
 
 .text-header {
   font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-normal);
+  font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -77,13 +77,14 @@
   z-index: 1;
 }
 
-@supports (text-stroke: 1px var(--white-color)) {
+@supports ((-webkit-text-stroke: 1px var(--white-color)) or (text-stroke: 1px var(--white-color))) {
   .label {
+    -webkit-text-stroke: 1px var(--white-color);
     text-stroke: 1px var(--white-color);
   }
 }
 
-@supports not (text-stroke: 1px var(--white-color)) {
+@supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) {
   .label {
     text-shadow: 
     -1px 0 var(--white-color),
@@ -99,31 +100,31 @@
   object-position: center;
 }
 
-.card:nth-child(2) .image {
+.vivid-contrast {
   filter: contrast(1.8);
 }
 
-.card:nth-child(3) .image {
+.monochrome-memories {
   filter: grayscale(1);
 }
 
-.card:nth-child(4) .image {
+.sunny-hue {
   filter: hue-rotate(30deg);
 }
 
-.card:nth-child(5) .image {
+.lively-vibrance {
   filter: hue-rotate(90deg) saturate(3);
 }
 
-.card:nth-child(6) .image {
+.retro-sepia {
   filter: sepia(1);
 }
 
-.card:nth-child(7) .image {
+.soft-focus {
   filter: blur(5px);
 }
 
-.card:nth-child(8) .image {
+.magic-hour {
   filter: blur(2px) hue-rotate(60deg) saturate(1.5) contrast(1.1) brightness(0.95);
 }
 
@@ -205,7 +206,7 @@
 
 .button__text {
   font-family: var(--font-accent);
-  font-variation-settings: 'wght' var(--font-weight-normal);
+  font-variation-settings: 400;
   font-size: 14px;
   line-height: 90%;
 }
@@ -249,7 +250,11 @@
 
 .like-icon {
   display: block;
-  transition: fill 0.3s ease;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.06s ease;
 }
 
 .like-icon:hover .core {
@@ -290,10 +295,15 @@
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
   transition: fill 0.1s linear;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.35s ease-in 1 0.15s alternate;
 }
 
 .like-icon.is-liked .sparks {
-  animation: showSparks 0.3s ease-in 0.3s forwards;
+  animation: show-Sparks 0.3s ease-in 0.3s forwards;
 }
 
 .floopy-icon {
@@ -339,6 +349,20 @@
 }
 
 @media (width < 376px) {
+
+  .header {
+    padding-block: clamp(120px, 50%, 120px);
+  }
+
+  .content-card-text {
+    gap: 20px;
+    padding: 26px;
+  }
+
+  .label {
+    padding-right: 13px;
+  }
+
   .button__save-memory {
     flex-direction: column;
   }
