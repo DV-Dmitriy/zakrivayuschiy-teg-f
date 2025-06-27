@@ -62,7 +62,8 @@
 .image-content {
   display: flex;
   justify-content: flex-end;
-  outline: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .label {
@@ -138,18 +139,15 @@
   font-variation-settings: 'wght' var(--font-weight-bold);
   padding: 5px 10px ;
   font-size: var(--font-size-base);
+  line-height: 21px;
 }
-
-.card-text {
-  font-family: var(--font-primary);
-  font-variation-settings: 'wght' var(--font-weight-normal);
-  font-size: var(--font-size-base);
-}  
 
 .content-card-text {
   display: grid;
   gap: 27px;
   padding: 25px;
+  font-size: var(--font-size-base);
+  line-height: 21px;
 }
 
 
@@ -352,11 +350,6 @@
 
   .header {
     padding-block: clamp(120px, 50%, 120px);
-  }
-
-  .content-card-text {
-    gap: 20px;
-    padding: 26px;
   }
 
   .label {
