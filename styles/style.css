@@ -73,7 +73,6 @@
   font-size: 14px;
   font-weight: var(--font-weight-normal);
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--white-color);
   opacity: 0.5;
   z-index: 1;
 }
